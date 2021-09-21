@@ -53,24 +53,7 @@ body {
   color: #000000;
 }
 
-/* Modal Sign in */
-.btn-signin-modal
-{
-  border: none;
-  background-color: #D60000;
-  border-radius: 5px;
-  width: 100%;
-}
-.btn-signin-modal:hover
-{
-  background-color: #ca0202;
-}
-.btn-close-modal
-{
-  border: none;
-  border-radius: 5px;
-  width: 100%;
-}
+
 
 /* Loading */
 .container-loading
