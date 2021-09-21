@@ -32,7 +32,29 @@ export default function LandingPage(){
         </Container>
 
         {/* Modal Signin */}
-        
+        <Modal show={showSignin}>
+            <Modal.Body>
+                <h2 className="fw-bold">Sign In</h2>
+                
+                <Form className="mt-5">
+
+                    <Form.Group className="mb-4">
+                        <Form.Control type="email" placeholder="Email" />
+                    </Form.Group>
+                    <Form.Group className="mb-3">
+                        <Form.Control type="password" placeholder="Password" />
+                    </Form.Group>
+                    <div className="mt-5 text-center">
+                        <button className="btn-signin-modal mb-3 text-white fw-bold py-2 px-4">Sign In</button> <br/>
+                        <a className="btn btn-secondary m-auto btn-close-modal text-white fw-bold py-2 px-4" onClick={() => setShowSignin(false)}>Close</a>
+                    </div>
+                    <p className="text-center mt-5 text-muted">
+                        Don't have an account ? Klik <b className="text-dark">Here</b>
+                    </p>
+
+                </Form>
+            </Modal.Body>
+        </Modal>
 
         </>
 
