@@ -54,7 +54,7 @@ body {
 }
 
 /* Modal Sign in */
-/* .btn-signin-modal
+.btn-signin-modal
 {
   border: none;
   background-color: #D60000;
@@ -70,7 +70,7 @@ body {
   border: none;
   border-radius: 5px;
   width: 100%;
-} */
+}
 
 /* Loading */
 .container-loading

@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import "../index.css";
-import {Container,Row,Col} from 'react-bootstrap';
+import {Container,Row,Col,Modal,Form} from 'react-bootstrap';
 import Icon from '../assets/img/Icon.png';
 import { motion } from "framer-motion";
 
@@ -31,7 +31,7 @@ export default function LandingPage(){
             </Row>
         </Container>
 
-        {/* Modal Signin
+        {/* Modal Signin */}
         <Modal show={showSignin}>
             <Modal.Body>
                 <h2 className="fw-bold">Sign In</h2>
@@ -54,7 +54,7 @@ export default function LandingPage(){
 
                 </Form>
             </Modal.Body>
-        </Modal> */}
+        </Modal>
 
         </>
 
