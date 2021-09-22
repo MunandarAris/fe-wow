@@ -1,6 +1,8 @@
 import React,{useState} from "react";
 import Loading from "./components/Loading";
 import LandingPage from "./pages/LandingPage";
+import Home from "./pages/Home";
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 
 function App() {
 
@@ -11,7 +13,17 @@ function App() {
   return (
     <>
       {
-        statusLoading ? <LandingPage /> : <Loading />
+        statusLoading ?
+
+        <Router>
+          <Switch>
+            <Route exact path="/" component={LandingPage}/>
+            <Route exact  path="/home" component={Home}/>
+          </Switch>
+        </Router>
+
+        : 
+        <Loading />
       }
     </>
   );

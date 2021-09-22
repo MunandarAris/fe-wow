@@ -3,13 +3,16 @@ import "../index.css";
 import {Container,Row,Col,Modal,Form} from 'react-bootstrap';
 import Icon from '../assets/img/Icon.png';
 import { motion } from "framer-motion";
-
+import { useHistory } from "react-router-dom";
 
 
 export default function LandingPage(){
 
     const [showSignin,setShowSignin] = useState(false);
     const [showSignup,setShowSignup] = useState(false);
+
+    let history = useHistory();
+    const handleRedirectToHome = () => history.push("/home");
 
     return (
 
@@ -49,7 +52,7 @@ export default function LandingPage(){
                         <Form.Control type="password" autoComplete="off" placeholder="Full Name" />
                     </Form.Group>
                     <div className="mt-5 text-center">
-                        <motion.button whileHover={{scale:0.9}} transition={{type:"spring",stiffness : 600}} className="btn-signin-modal mb-3 text-white fw-bold py-2 px-4">Sign Up</motion.button> <br/>
+                        <motion.button whileHover={{scale:0.9}} transition={{type:"spring",stiffness : 600}} className="btn-signin-modal mb-3 text-white fw-bold py-2 px-4" onClick={handleRedirectToHome}>Sign Up</motion.button> <br/>
                         <motion.a whileHover={{scale:0.9}} transition={{type:"spring",stiffness : 600}} className="btn btn-secondary m-auto btn-close-modal text-white fw-bold py-2 px-4" onClick={() => setShowSignup(false)}>Close</motion.a>
                     </div>
                     <p className="text-center mt-5 text-muted">
@@ -76,7 +79,7 @@ export default function LandingPage(){
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
                     <div className="mt-5 text-center">
-                        <motion.button whileHover={{scale:0.9}} transition={{type:"spring",stiffness : 600}} className="btn-signin-modal mb-3 text-white fw-bold py-2 px-4">Sign In</motion.button> <br/>
+                        <motion.button whileHover={{scale:0.9}} transition={{type:"spring",stiffness : 600}} className="btn-signin-modal mb-3 text-white fw-bold py-2 px-4" onClick={handleRedirectToHome}>Sign In</motion.button> <br/>
                         <motion.a whileHover={{scale:0.9}} transition={{type:"spring",stiffness : 600}} className="btn btn-secondary m-auto btn-close-modal text-white fw-bold py-2 px-4" onClick={() => setShowSignin(false)}>Close</motion.a>
                     </div>
                     <p className="text-center mt-5 text-muted">

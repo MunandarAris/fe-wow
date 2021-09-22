@@ -80,3 +80,23 @@ body {
   align-items: center;
   height: 100vh;
 }
+
+
+/* Home */
+.container-home {
+  background-color: #E5E5E5;
+}
+.home-logo {
+  width: 60%;
+}
+.home-user-image {
+  width: 30%;
+}
+.container-home .link p 
+{
+  cursor: pointer;
+}
+.framer-image 
+{
+  width: 100%;
+}
