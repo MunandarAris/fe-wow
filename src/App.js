@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import Loading from "./components/Loading";
+import Loading from "./components/Load/Loading";
 import LandingPage from "./pages/LandingPage";
 import Home from "./pages/Home";
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
@@ -20,6 +20,7 @@ function App() {
             <Route exact path="/" component={LandingPage}/>
             <Route exact  path="/home" component={Home}/>
             <Route exact  path="/payment" component={Home}/>
+            <Route exact  path="/profile" component={Home}/>
           </Switch>
         </Router>
         : 

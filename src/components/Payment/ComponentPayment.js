@@ -7,10 +7,10 @@ import IconUploadImage from '../../assets/img/icon-upload-image.png';
 
 const styles = {
     formInputAccount : {
-        width:"130%",backgroundColor:"#BCBCBC",color:"black"
+        width:"50%",backgroundColor:"#BCBCBC",color:"black"
     },
     formUpload : {
-        color:"#D60000",cursor:"pointer",border:"2px solid #BCBCBC",borderRadius:"5px",width:"130%"
+        color:"#D60000",cursor:"pointer",border:"2px solid #BCBCBC",borderRadius:"5px",width:"50%"
     }
 }
 
@@ -18,7 +18,7 @@ export default function ComponentPayment(){
 
     return(
           <>
-            <Container className="text-center m-auto d-flex flex-column align-items-center ">
+            <Container className="text-center m-auto ">
                 <h1 className="fw-bold">Premium</h1>
                 
                 <p className="mt-4">
@@ -30,16 +30,16 @@ export default function ComponentPayment(){
                 </p>
 
                 <Form>
-                    <Form.Group className="mb-3 mt-4">
-                        <Form.Control type="number" className="py-2" style={styles.formInputAccount} placeholder="Input your account number" />
+                    <Form.Group className="mb-4 mt-5">
+                        <Form.Control type="number" className="py-2 mx-auto" style={styles.formInputAccount} placeholder="Input your account number" />
                     </Form.Group>
 
-                    <Form.Group controlId="formFile" className="mb-3">
+                    <Form.Group controlId="formFile" className="mb-4">
                         <Form.Label className="fw-bold py-2" style={styles.formUpload}>Attache proof of transfer <img src={IconUploadImage} alt="icon" style={{width:"7%"}} /></Form.Label>
                         <Form.Control hidden type="file" />
                     </Form.Group>
 
-                    <Button variant="danger" style={{width:"130%"}}>Send</Button>
+                    <Button variant="danger" style={{width:"50%"}}>Send</Button>
                 </Form>
             </Container>
           </>   

@@ -9,7 +9,7 @@ import Book2 from '../assets/img/cover-book/cvb-2.png';
 import Book3 from '../assets/img/cover-book/cvb-3.png';
 import Book4 from '../assets/img/cover-book/cvb-4.png';
 
-import Loading1 from "./Loading1";
+import Loading1 from "./Load/Loading1";
 
 export default function ComponentCardRightHome(){
 

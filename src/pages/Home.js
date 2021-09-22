@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import Loading from "../components/Loading";
+import Loading from "../components/Load/Loading";
 import ComponentHome from '../components/ComponentHome';
 
 export default function Home(){
