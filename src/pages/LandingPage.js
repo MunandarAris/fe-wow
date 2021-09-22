@@ -1,8 +1,13 @@
 import React,{useState} from "react";
+
 import "../index.css";
+
 import {Container,Row,Col,Modal,Form} from 'react-bootstrap';
+
 import Icon from '../assets/img/Icon.png';
+
 import { motion } from "framer-motion";
+
 import { useHistory } from "react-router-dom";
 
 

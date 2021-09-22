@@ -1,7 +1,9 @@
 import React from "react";
 
 import {Col} from 'react-bootstrap';
+
 import ProfileIcon from '../assets/img/profile-icon.png';
+
 import { motion } from "framer-motion";
 
 

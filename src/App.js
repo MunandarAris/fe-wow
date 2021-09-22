@@ -19,9 +19,9 @@ function App() {
           <Switch>
             <Route exact path="/" component={LandingPage}/>
             <Route exact  path="/home" component={Home}/>
+            <Route exact  path="/payment" component={Home}/>
           </Switch>
         </Router>
-
         : 
         <Loading />
       }
