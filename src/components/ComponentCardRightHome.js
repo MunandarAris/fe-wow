@@ -9,6 +9,8 @@ import Book2 from '../assets/img/cover-book/cvb-2.png';
 import Book3 from '../assets/img/cover-book/cvb-3.png';
 import Book4 from '../assets/img/cover-book/cvb-4.png';
 
+import { motion } from "framer-motion";
+
 import Loading1 from "./Load/Loading1";
 
 export default function ComponentCardRightHome(){
@@ -23,7 +25,9 @@ export default function ComponentCardRightHome(){
             status ? 
             <>
             <img src={FramerImage} alt="framer" className="framer-image"></img>
-            <h1 className="fw-bold p-3">List Book</h1>
+            <h1 className="fw-bold p-3">
+              <motion.i initial={{scale:1}} animate={{scale:1.2}} transition={{type:"tween",yoyo:Infinity}} class='bx bx-list-check text-danger'/> List Book
+            </h1>
             <Row className="mt-3 justify-content-between">
                 <ComponentListBook image={Book1} bookName="Serangkai" author="Valerie Patkar" />
                 <ComponentListBook image={Book2} bookName="Z1 - Sd/Mi Buku Siswa Tematik T..." author="Afi Yustiyana" />

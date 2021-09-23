@@ -6,6 +6,8 @@ import ComponentData from "./ComponentData";
 
 import userImage from "../../assets/img/user-image/user1.png";
 
+import { motion } from "framer-motion";
+
 const Styles = {
     container : { 
         backgroundColor:"#FFD9D9",
@@ -39,7 +41,7 @@ export default function ComponentDetailData(){
             </Col>
             <Col md={5} className="text-center">
                 <img src={userImage} alt="usr" style={Styles.img} />
-                <Button style={Styles.button} className="mt-4" variant="danger"><i class='bx bxs-pencil' ></i> Edit Profile</Button>
+                <motion.a whileHover={{scale:1.1}} transition={{type:"spring",stiffness:"600"}} style={Styles.button} className="btn btn-danger mt-4" variant="danger"><i class='bx bxs-pencil' ></i> Edit Profile</motion.a>
             </Col>
         </Row>
     </Container>
