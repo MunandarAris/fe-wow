@@ -4,6 +4,8 @@ import Loading from "./components/Load/Loading";
 import LandingPage from "./pages/LandingPage";
 import Home from "./pages/Home";
 import ReadBook from "./pages/ReadBook";
+import TransactionPage from "./pagesBackend/TransactionPage";
+import NotFound from "./notFound";
 
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 
@@ -26,6 +28,8 @@ function App() {
             <Route exact  path="/profile" component={Home}/>
             <Route exact  path="/detail-book" component={Home}/>
             <Route exact  path="/read-book" component={ReadBook}/>
+            <Route exact  path="/transaction" component={TransactionPage}/>
+            <Route exact  path="*" component={NotFound}/>
           </Switch>
         </Router>
         : 

@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  background-color: #E5E5E5;
 }
 
 /* landing Page */
@@ -99,4 +100,14 @@ body {
 .framer-image 
 {
   width: 100%;
+}
+
+.cutom-btn:focus
+{
+  box-shadow: none;
+}
+
+.cutom-btn:after 
+{
+  content: none;
 }
