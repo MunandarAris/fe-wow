@@ -1,8 +1,8 @@
 import { Container, Table, Dropdown,DropdownButton } from "react-bootstrap";
 
-import { motion } from "framer-motion";
-
 import fakeData from "./fakeData";
+
+import { BiBlanket } from "react-icons/bi";
 
 const number = 0;
 
@@ -11,7 +11,7 @@ export default function TableTransaction(){
           <>
             <Container className="mt-4">
                 <h2 className="my-5">
-                    <i class='bx bx-credit-card text-danger'></i> Incoming Transaction
+                    <BiBlanket className="text-danger"/> Incoming Transaction
                 </h2>
                 <Table striped className="text-center mt-4" size="sm">
                     <thead className="text-danger">

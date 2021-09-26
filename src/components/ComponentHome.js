@@ -2,13 +2,12 @@ import React from "react";
 
 import {Container,Row,Col} from 'react-bootstrap';
 
-import ComponentHomeAvatar from "./ComponentHomeAvatar";
+import ComponentHomeAvatar from "./ComponentHomeProfileUser";
 import ComponentHomeLink from "./ComponentHomeLink";
 import ComponentCardRightHome from './ComponentCardRightHome';
 import Payment from "../pages/Payment";
 import Profile from "../pages/Profile";
 import DetailBook from "../pages/DetailBook";
-import ReadBook from "../pages/ReadBook";
 
 import {Route} from 'react-router-dom';
 
@@ -26,7 +25,7 @@ export default function ComponentHome(){
                             <Route exact path="/home" component={ComponentCardRightHome}/>
                             <Route exact path="/payment" component={Payment}/>
                             <Route exact path="/profile" component={Profile}/>
-                            <Route exact path="/detail-book" component={DetailBook}/>
+                            <Route exact path="/detail-book/:id" component={DetailBook}/>
                         </Col>
                     </Row>
                 </Container>

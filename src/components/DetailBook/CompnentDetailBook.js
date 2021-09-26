@@ -1,6 +1,8 @@
 import { Col, Row } from "react-bootstrap";
 
-import Book1 from "../../assets/img/cover-book/cvb-1.png";
+import { useParams } from 'react-router-dom';
+
+import fakeData from "../../fakeData/bookLists";
 
 const Styles = {
     img : {
@@ -10,25 +12,47 @@ const Styles = {
 
 export default function ComponentDetailBook(){
 
+    let image = "";
+    let bookName = "";
+    let author = "";
+    let publication = "";
+    let pages = 0;
+    let ISBN = 0;
+
+    let { id } = useParams();
+
+    for(let data of fakeData)
+    {
+        if(data.id == id)
+        {
+            image = data.image;
+            bookName = data.bookName;
+            author = data.author;
+            publication = data.publicationDate;
+            pages = data.pages;
+            ISBN = data.ISBN;
+        }
+    }
+
     return(
 
         <>
             <Row className=" justify-content-between">
                 <Col md={5}>
-                        <img src={Book1} alt="Book" style={Styles.img} />
+                        <img src={image} alt="Book" style={Styles.img} />
                 </Col>
                 <Col md={5}>
-                    <h1 className="fw-bold">Serangkai</h1>
-                    <p className="text-muted">Valerie Patkar</p>
+                    <h1 className="fw-bold">{bookName}</h1>
+                    <p className="text-muted">{author}</p>
 
                     <h5 className="fw-bold mt-5">Publication Date</h5>
-                    <p className="text-muted">May 2001</p>
+                    <p className="text-muted">{publication}</p>
 
                     <h5 className="fw-bold mt-5">Pages</h5>
-                    <p className="text-muted">406</p>
+                    <p className="text-muted">{pages}</p>
 
                     <h5 className="fw-bold mt-5 text-danger">ISBN</h5>
-                    <p className="text-muted">99221133334443</p>
+                    <p className="text-muted">{ISBN}</p>
                 </Col>
             </Row>
         </>

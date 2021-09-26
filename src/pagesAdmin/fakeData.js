@@ -8,7 +8,7 @@ const fakeData = [
     {
         user : "Natsya Walino",
         proofTransaction : "bri.jpg",
-        remainingActive : 20,
+        remainingActive : 30,
         statusPayment : 'approve'
     },
     {

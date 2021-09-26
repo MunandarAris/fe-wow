@@ -4,14 +4,12 @@ import {Row} from 'react-bootstrap';
 
 import FramerImage from '../assets/img/framer.png';
 import ComponentListBook from "./ComponentListBook";
-import Book1 from '../assets/img/cover-book/cvb-1.png';
-import Book2 from '../assets/img/cover-book/cvb-2.png';
-import Book3 from '../assets/img/cover-book/cvb-3.png';
-import Book4 from '../assets/img/cover-book/cvb-4.png';
-
-import { motion } from "framer-motion";
 
 import Loading1 from "./Load/Loading1";
+
+import { BiListCheck } from "react-icons/bi";
+
+import bookLists from "../fakeData/bookLists";
 
 export default function ComponentCardRightHome(){
 
@@ -26,13 +24,16 @@ export default function ComponentCardRightHome(){
             <>
             <img src={FramerImage} alt="framer" className="framer-image"></img>
             <h1 className="fw-bold p-3">
-              <motion.i initial={{scale:1}} animate={{scale:1.2}} transition={{type:"tween",yoyo:Infinity}} class='bx bx-list-check text-danger'/> List Book
+              <BiListCheck class='bx bx-list-check fs-1 text-danger'/> List Book
             </h1>
             <Row className="mt-3 justify-content-between">
-                <ComponentListBook image={Book1} bookName="Serangkai" author="Valerie Patkar" />
-                <ComponentListBook image={Book2} bookName="Z1 - Sd/Mi Buku Siswa Tematik T..." author="Afi Yustiyana" />
-                <ComponentListBook image={Book3} bookName="Afi Yustiyana" author="DR. Kamil Yusuf Al-Atum" />
-                <ComponentListBook image={Book4} bookName="Tess on the Road" author="Rachel Hartman" />
+              {
+                bookLists.map((value,index) => {
+                  return(
+                    <ComponentListBook key={index} id={value.id} image={value.image} bookName={value.bookName} author={value.author} />
+                  )
+                })
+              }
             </Row>
             </>
             :

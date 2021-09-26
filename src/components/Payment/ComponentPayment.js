@@ -1,9 +1,15 @@
-import React from "react";
+import React,{useContext} from "react";
 
 import { Container,Form,Button } from "react-bootstrap";
 
 import WowLogo from '../../assets/img/Wow.png';
 import IconUploadImage from '../../assets/img/icon-upload-image.png';
+
+import {GlobalContext} from '../../context/globalContext';
+
+import fakeData from "../../fakeData/users";
+
+import { useHistory } from "react-router-dom";
 
 const styles = {
     formInputAccount : {
@@ -15,6 +21,22 @@ const styles = {
 }
 
 export default function ComponentPayment(){
+
+    const [state] = useContext(GlobalContext);
+
+    let history = useHistory();
+
+    const handlePayment = () => {
+        for(let user of fakeData)
+        {
+            if(state.user.email == user.email)
+            {
+                user.statusSubscribe = true;
+
+                history.push('/profile');
+            }
+        }
+    }
 
     return(
           <>
@@ -39,7 +61,7 @@ export default function ComponentPayment(){
                         <Form.Control hidden type="file" />
                     </Form.Group>
 
-                    <Button variant="danger" style={{width:"50%"}}>Send</Button>
+                    <Button variant="danger" onClick={handlePayment} style={{width:"50%"}}>Send</Button>
                 </Form>
             </Container>
           </>   

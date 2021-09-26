@@ -5,8 +5,8 @@ export default function ComponentData(props){
 
     return(
           <>
-          <Row className="align-items-center mt-2">
-            <Col md={2} className="fs-1">{props.icon}</Col>
+          <Row className=" mt-2">
+            <Col md={2} className="fs-2">{props.icon}</Col>
             <Col>
                 <p className="fw-bold">{props.data}</p>
                 <p className="text-muted">{props.detail}</p>
